@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding: 16px;
+  background-color: white;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 50px;
+  text-align: center;
+  color: black;
+}
+.header h1 {
+  font-size: 50px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 50px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+body {
+  background-image: url('exam.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Registration</h1>
+  <div class="navbar">
+  <a href="HP.html">Home</a>
+  <a href="WP2.html">Exams </a>
+  <a href="#">Login/Registration</a>
+  <a href="WP4.html" class="right">Help/About us</a>
+  </div>
+  <p>
+</div>
+<div class="container">
+<p>Please fill in this form to create an account.</p>
+<hr>
+<form action="insert.php" autocomplete="on" method="Post">
+<li><label>Name</label></li><br>
+<input type="text" id="Name" name="Name" required><br>
+<li><label>Password</label></li><br>
+<input type="password" id="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+<br>
+<br>
+<br>
+<li><label for="address">Address:</label></li><br>
+<input type="text" name="Address" size="50" /></li><br>
+<br>
+<br>
+<br>
+<li><label name="ExamName">Exam Name:</label></li>
+<select name="ExamName"required>
+  <option value="GRE">GRE</option>
+  <option value="GATE">GATE</option>
+  <option value="CEED">CEED</option>
+  <option value="TOEFL">TOEFL</option>
+  <option value="CAT">CAT</option>
+</select>
+<br>
+<br>
+<br>
+<br>
+<li><label for="ZIPCode">ZIP Code:</label></li>
+<input type="text" name="ZIPCode" maxlength="6" required></li>
+<br>
+<br>
+<br>
+<br>
+<li><label for="Email">Email:</label></li><br>
+<input type="text" name="Email" size="20" required></li>
+<br>
+<br>
+<br>
+<br>
+<li><label id="Sex" name="Sex">Sex:</label></li>
+<input type="radio" name="Sex" value="Male" /><span>Male</span></li>
+<input type="radio" name="Sex" value="Female" /><span>Female</span></li>
+<br>
+<br>
+<br>
+<br>
+<li><label for="comments"  name="comments":>Other comments:</label></li>
+<textarea name="comments" id="comments" required"></textarea></li>
+</div>
+</ul>
+</center>
+    <button class="button" type="submit"><span>Register </span></button>
+  </div>
+</form>
+<div class="footer">
+<p>OnlineExamRegistration is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2019 by XYZ Data. All Rights Reserved.
+Powered by HTML and CSS.</p>
+</div>
+</body>
+</html>
